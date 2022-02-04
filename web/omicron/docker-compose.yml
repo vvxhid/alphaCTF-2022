@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+
+  web:
+    build: .
+    image: omicron
+    environment:
+      - FLAG=alphaCTF{d3bug_th3_h3ll}
+    restart: always
+    ports:
+      - "8000:80"
