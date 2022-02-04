@@ -1,0 +1,33 @@
+<?php
+
+return array(
+	'toilet_paper' => 'Toilet paper',
+	'toilet_paper_desc' => 'Exquisite smooth high quality paper for you to wipe your exit path.',
+	'hand_sanitizer' => 'Hand sanitizer',
+	'hand_sanitizer_desc' => 'High quality liquid hand sanitizer lab tested and approved by 9 out of 10 certified chemists to eliminate 99.9% of COVID-19 viruses on your filthy hand.',
+	'surgical_masks' => 'Surgical masks',
+	'price' => 'Price',
+	'home' => 'Home',
+	'cart' => 'Cart',
+	'login' => 'Login',
+	'register' => 'Register',
+	'settings' => 'Settings',
+	'checkout' => 'Checkout',
+	'add_to_cart' => 'Add to cart',
+	'logout' => 'Logout',
+	'language' => 'Language',
+	'english' => 'English',
+	'french' => 'Franch',
+	'save' => 'Save',
+	'your_cart' => 'Your Cart',
+	'total' => 'Total',
+	'have_to_log_in' => 'You have to be logged in to add items to cart!',
+	'email' => 'E-mail Address',
+	'password' => 'Password',
+	'remember_me' => 'Remember Me',
+	'name' => 'Name',
+	'confirm_password' => 'Confirm Password',
+	'illustration_only' => 'Pictures are for illustration purposes only. Actual product may vary.',
+	'settings_saved' => 'New settings saved successfully.',
+	'overdemand' => 'Items are temporarily unavailable due to overdemand, please try again tomorrow!'
+);

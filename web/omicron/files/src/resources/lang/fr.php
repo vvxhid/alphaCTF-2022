@@ -1,0 +1,33 @@
+<?php
+
+return array(
+	'toilet_paper' => 'Papier toilette',
+	'toilet_paper_desc' => 'Papier de haute qualité lisse et exquis pour essuyer votre chemin de sortie.',
+	'hand_sanitizer' => 'Désinfectant pour les mains',
+	'hand_sanitizer_desc' => 'Laboratoire de désinfectant liquide pour les mains de haute qualité testé et approuvé par 9 chimistes certifiés sur 10 pour éliminer 99,9 % des virus COVID-19 sur votre main sale.',
+	'surgical_masks' => 'Masques chirurgicaux',
+	'price' => 'Prix',
+	'home' => 'Home',
+	'cart' => 'Carte',
+	'login' => 'Connexion',
+	'register' => 'Sinscrire',
+	'settings' => 'réglages',
+	'checkout' => 'checkout',
+	'add_to_cart' => 'Ajouter au panier',
+	'logout' => 'Se déconnecter',
+	'language' => 'langage',
+	'english' => 'Anglais',
+	'french' => 'Francais',
+	'save' => 'Sauvgarder',
+	'your_cart' => 'Ton carte',
+	'total' => 'totale',
+	'have_to_log_in' => 'You have to be logged in to add items to cart!',
+	'email' => 'E-mail',
+	'password' => 'mot de passe',
+	'remember_me' => 'souviens-toi de moi',
+	'name' => 'nom',
+	'confirm_password' => 'confirme mot de passe',
+	'illustration_only' => 'Les images ont seulement des buts illustratifs. Le produit réel peut varier.',
+	'settings_saved' => 'Nouveaux paramètres enregistrés avec succès.',
+	'overdemand' => 'Les articles sont temporairement indisponibles en raison dune surdemande, veuillez réessayer demain !'
+);

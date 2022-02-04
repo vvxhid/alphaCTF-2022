@@ -1,0 +1,16 @@
+#!/bin/sh
+
+sed -i "s/flag{test}/$FLAG/" /var/www/html/flag.txt
+
+mv /var/www/html/flag.txt /flag.txt
+
+sed -i "s/allow_url_include = Off/allow_url_include = On/g" /etc/php7/php.ini
+
+export FLAG=not_flag
+FLAG=not_flag
+
+httpd &
+
+mysqld_safe &
+
+tail -F /var/log/apache2/error.log /var/log/apache2/access.log
