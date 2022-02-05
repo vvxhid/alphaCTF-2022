@@ -1,0 +1,1 @@
+alphaCTF{d0nt_us3_scanf_w1th0ut_ch3ck1ng_1nput_l3ngth!!!}
