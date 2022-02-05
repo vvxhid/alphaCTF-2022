@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+
+  notepad:
+    build:
+      context: . 
+      dockerfile: Dockerfile 
+    
+    ports: 
+    - "9005:9005"
