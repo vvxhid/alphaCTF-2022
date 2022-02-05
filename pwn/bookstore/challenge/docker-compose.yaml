@@ -1,0 +1,12 @@
+
+version: "3"
+
+services:
+
+  bookstore:
+    build:
+      context: . 
+      dockerfile: Dockerfile 
+    
+    ports: 
+    - "9007:9007"
