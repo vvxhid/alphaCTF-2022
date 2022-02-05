@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+
+  random:
+    build:
+      context: . 
+      dockerfile: Dockerfile 
+    
+    ports: 
+    - "9004:9004"
