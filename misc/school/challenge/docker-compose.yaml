@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+
+  school:
+
+    container_name: school_service 
+    build:
+      context: . 
+      dockerfile: Dockerfile 
+
+    ports:
+      - "8001:8001"
