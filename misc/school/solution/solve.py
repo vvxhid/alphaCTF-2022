@@ -18,8 +18,10 @@ def main():
         p.sendlineafter("answer: ", str(solution))
 
     
-    flag = p.recv()
-    print(flag)
+    p.recvuntil("flag: ")
+    flag = p.recvline().rstrip().decode()
+
+    log.info(f"Flag: {flag}")
     
 if __name__ == "__main__":
 
