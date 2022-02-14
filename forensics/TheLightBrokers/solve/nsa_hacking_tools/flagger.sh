@@ -1,0 +1,1 @@
+echo "alphaCTF{c4nt_B3l1ev3_NS4_1s_Us1Ng_Z1PL3gacy_3NCryptiong}"
