@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  app:
+    restart: always
+    image: quiquart-app
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - target: 1337
+        published: 1337
+        protocol: udp
+        mode: host
+    
