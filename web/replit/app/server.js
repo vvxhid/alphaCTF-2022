@@ -22,6 +22,9 @@ const UNSAFE_WORDS = [
   "fs",
   "Buffer",
   "base64",
+  "btoa",
+  "atob",
+  "length"
 ];
 
 const unsafeWordsObj = UNSAFE_WORDS?.reduce(
