@@ -1,6 +1,6 @@
 FROM ubuntu:20.04 
 
-RUN apt-get update -y 
+RUN apt-get update && apt-get upgrade -y
 RUN apt-get install socat python3 -y 
 
 RUN useradd -m -d /home/school -s /bin/bash -u 1000 school 
