@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-RUN apt-get update -y 
+RUN apt-get update && upgrade -y 
 RUN apt-get install socat patchelf -y 
 
 RUN useradd -m -d /home/bookstore -s /bin/bash -u 1000 bookstore 
