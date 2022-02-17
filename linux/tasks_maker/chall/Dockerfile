@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-RUN apt-get update && apt-get upgrade
+RUN apt-get update && apt-get -y upgrade
 RUN apt-get install -y cron socat
 RUN useradd -m -d /ctf -s /bin/bash ctf
 RUN echo "ctf:ctf-user-1337" | chpasswd
