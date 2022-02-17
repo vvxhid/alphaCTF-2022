@@ -1,6 +1,6 @@
 FROM ubuntu:20.04 
 
-RUN apt-get update -y 
+RUN apt-get update && apt-get upgrade -y
 RUN apt-get install socat python3 vim -y 
 
 RUN useradd -m -d /home/alphaecho -s /bin/bash -u 1000 alphaecho 
