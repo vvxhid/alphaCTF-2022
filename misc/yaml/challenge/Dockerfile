@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-RUN apt-get update -y 
+RUN apt-get update && apt-get upgrade -y
 RUN apt-get install python3 python3-pip socat -y 
 RUN pip install PyYAML==3.13
 
