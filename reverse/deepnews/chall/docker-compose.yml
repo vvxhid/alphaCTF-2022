@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+
+  messenger:
+    build:
+      context: messenger
+      dockerfile: Dockerfile 
+    
+    ports: 
+    - "9001:9001"
+    networks:
+      - depp-news-network
+
+  deepnews-app:
+    build:
+      context: app
+      dockerfile: Dockerfile
+    privileged: true
+
+    environment:
+      DEVICE: "Samsung Galaxy S6"
+    
+    # for debug only
+    # ports:
+    #   - "6080:6080"
+    
+    networks:
+      - depp-news-network 
+
+networks:
+  depp-news-network:
