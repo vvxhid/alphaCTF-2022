@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "express": "^4.17.2",
+    "mysql": "^2.18.1"
+  },
+  "name": "sequelae",
+  "version": "1.0.0",
+  "main": "server.js"
+}
