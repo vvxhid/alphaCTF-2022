@@ -25,7 +25,7 @@ connection?.connect((error) => {
     if (error) throw error;
     console.log("Table users created!");
     // init users
-    const insert_sql = "INSERT INTO users VALUES (1, 'admin', SHA2(RAND(), 512) )";
+    const insert_sql = "INSERT IGNORE INTO users VALUES (1, 'admin', SHA2(RAND(), 512) )";
     connection.query(insert_sql, (error, result) => {
       if (error) throw error;
       console.log("Admin created!");

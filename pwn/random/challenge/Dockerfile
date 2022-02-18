@@ -1,13 +1,13 @@
-FROM ubuntu:20.04 
+FROM ubuntu:20.04
 
-RUN apt-get update && apt-get upgrade -y 
-RUN apt-get install socat patchelf -y 
+RUN apt-get update && \
+    apt-get install -y socat patchelf && \
+    rm -rf /var/lib/apt/lists 
 
-RUN useradd -m -d /home/random -s /bin/bash -u 1000 random 
+RUN useradd random
+WORKDIR /home/random
 
 RUN rm /dev/zero 
-
-WORKDIR /home/random 
 
 COPY ./flag.txt ./ 
 COPY ./chall ./ 
@@ -17,15 +17,9 @@ COPY ./entrypoint.sh ./
 
 RUN patchelf --set-interpreter ./ld-linux-x86-64.so.2 --replace-needed libc.so.6 ./libc.so.6 ./chall
 
-RUN chown -R root:random /home/random 
-RUN chmod 750 /home/random 
-RUN chown root:random ./flag.txt 
-RUN chmod 440 ./flag.txt 
-RUN chmod 550 /home/random/chall 
+RUN chmod +x entrypoint.sh chall libc.so.6 ld-linux-x86-64.so.2 && chown -R random:random .
 
-EXPOSE 9004 
-
-RUN chmod +x ./entrypoint.sh 
+USER random
 
 CMD ["./entrypoint.sh"]
 
