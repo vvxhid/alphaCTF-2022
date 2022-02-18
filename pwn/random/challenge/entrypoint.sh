@@ -1,3 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-socat -dd -T60 TCP-LISTEN:9004,reuseaddr,fork,su=random EXEC:/home/random/chall,stderr
+EXEC="./chall"
+PORT=9004
+
+socat -dd -T300 tcp-l:$PORT,reuseaddr,fork,keepalive exec:"$EXEC",stderr
