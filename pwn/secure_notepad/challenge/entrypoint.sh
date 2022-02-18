@@ -1,3 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-socat -dd -T60 TCP-LISTEN:9005,reuseaddr,fork,su=notepad EXEC:/home/notepad/chall,stderr
+EXEC="./chall"
+PORT=9005
+
+socat -dd -T300 tcp-l:$PORT,reuseaddr,fork,keepalive exec:"$EXEC",stderr
