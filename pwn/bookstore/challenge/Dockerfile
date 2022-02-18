@@ -3,8 +3,9 @@ FROM ubuntu:20.04
 RUN apt-get update && apt-get upgrade -y 
 RUN apt-get install socat patchelf -y 
 
+ARG PASSWORD==bookstore
 RUN useradd -m -d /home/bookstore -s /bin/bash -u 1000 bookstore 
-
+RUN echo "bookstore:${PASSWORD}" | chpasswd 
 WORKDIR /home/bookstore 
 
 COPY ./flag.txt ./

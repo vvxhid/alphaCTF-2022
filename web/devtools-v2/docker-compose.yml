@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  nextjs:
+    ports:
+      - 3002:3002
+    build:
+      context: .
+      dockerfile: Dockerfile
