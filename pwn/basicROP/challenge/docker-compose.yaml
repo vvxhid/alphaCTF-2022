@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+
+  rop:
+    build:
+      context: . 
+      dockerfile: Dockerfile 
+    
+    ports: 
+    - "9020:9020"

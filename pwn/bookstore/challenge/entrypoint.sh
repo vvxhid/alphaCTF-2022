@@ -1,3 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-socat -dd -T60 TCP-LISTEN:9007,reuseaddr,fork,su=bookstore EXEC:/home/bookstore/chall,stderr
+EXEC="./chall"
+PORT=9007
+
+socat -dd -T300 tcp-l:$PORT,reuseaddr,fork,keepalive exec:"$EXEC",stderr
