@@ -2,7 +2,7 @@
 
 #easy bash script 
 
-dir = "/tmp/tasks/"
+dir="/tmp/tasks/"
 
 cd $dir && ls -1a | while read task ; do 
     if [ -x "$dir$task" ] ; then 
