@@ -1,22 +1,18 @@
 FROM ubuntu:20.04
 
 RUN apt-get update && \
-    apt-get install -y socat patchelf && \
+    apt-get install -y socat && \
     rm -rf /var/lib/apt/lists/*
 
-RUN useradd alpha 
+RUN useradd -m -d /home/alpha -s /bin/bash alpha 
 WORKDIR /home/alpha 
 
 COPY ./flag.txt ./ 
 COPY ./alpha ./ 
-COPY ./libc.so.6 ./ 
-COPY ./ld-linux-x86-64.so.2 ./
 COPY ./entrypoint.sh ./
 
-RUN patchelf --set-interpreter ./ld-linux-x86-64.so.2 --replace-needed libc.so.6 ./libc.so.6 ./alpha
-RUN chmod +x entrypoint.sh alpha libc.so.6 ld-linux-x86-64.so.2 && chown -R alpha:alpha .
+RUN chmod +x entrypoint.sh alpha && chown -R alpha:alpha .
 
 USER alpha
 
 CMD ["./entrypoint.sh"]
-
