@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  jim-jail:
+    build: .
+    ports:
+      - "9003:9025"
