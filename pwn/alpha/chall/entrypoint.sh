@@ -1,5 +1,5 @@
 #!/bin/sh
 
-EXEC="./alpha"
+EXEC="/home/alpha/alpha"
 PORT=9012
-socat -dd -T600 tcp-listen:$PORT,reuseaddr,fork,su=chall EXEC:$EXEC,stderr
+socat -dd -T300 tcp-l:$PORT,reuseaddr,fork,keepalive exec:"$EXEC",stderr
