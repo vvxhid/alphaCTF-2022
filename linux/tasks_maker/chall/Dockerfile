@@ -9,6 +9,7 @@ RUN useradd -r -s /bin/bash ctf-cracked
 COPY flag.txt /ctf
 COPY chall.sh /ctf
 COPY task /etc/cron.d/task
+COPY entrypoint.sh /entrypoint.sh
 
 #create tasks list file 
 RUN mkdir -m 733 /tmp/tasks
@@ -23,14 +24,8 @@ RUN chown ctf-cracked:ctf-cracked /ctf/chall.sh
 RUN chmod 400 /ctf/flag.txt
 RUN chmod 544 /ctf/chall.sh
 RUN chmod 644 /etc/cron.d/task
+RUN chmod +x /entrypoint.sh
 
-#run cron job
-RUN crontab /etc/cron.d/task
+# CMD ["su", "-", "ctf", "--command", "socat tcp-listen:1337,fork,reuseaddr EXEC:/bin/bash"]
 
-WORKDIR /ctf
-
-CMD ["su", "-", "ctf", "--command", "socat tcp-listen:1337,fork,reuseaddr EXEC:/bin/bash"]
-
-
-
-
+ENTRYPOINT [ "/entrypoint.sh" ]
