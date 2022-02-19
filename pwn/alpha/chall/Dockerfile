@@ -14,7 +14,7 @@ COPY ./ld-linux-x86-64.so.2 ./
 COPY ./entrypoint.sh ./
 
 RUN patchelf --set-interpreter ./ld-linux-x86-64.so.2 --replace-needed libc.so.6 ./libc.so.6 ./alpha
-RUN chmod +x entrypoint.sh chall libc.so.6 ld-linux-x86-64.so.2 && chown -R alpha:alpha .
+RUN chmod +x entrypoint.sh alpha libc.so.6 ld-linux-x86-64.so.2 && chown -R alpha:alpha .
 
 USER alpha
 
