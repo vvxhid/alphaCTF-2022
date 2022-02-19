@@ -1,7 +1,7 @@
 FROM node
 RUN apt-get update -y && apt-get upgrade -y
 
-ENV NODE_ENV production
+ENV NODE_ENV development
 ENV PORT 3002
 
 EXPOSE 3002
