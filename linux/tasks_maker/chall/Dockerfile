@@ -30,7 +30,3 @@ RUN crontab /etc/cron.d/task
 WORKDIR /ctf
 
 CMD ["su", "-", "ctf", "--command", "socat tcp-listen:1337,fork,reuseaddr EXEC:/bin/bash"]
-
-
-
-

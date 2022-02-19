@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+
+  cron-task:
+    build: .
+    ports: 
+    - "9002:9002"

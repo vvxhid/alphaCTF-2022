@@ -2,10 +2,11 @@
 
 adb connect deepnews-app
 
+adb wait-for-device
 echo "device is online as user"
 
 # wait until adb is retared as root
-sleep 60
+sleep 300
 
 echo "Waiting for device to come online as root"
 adb connect deepnews-app
