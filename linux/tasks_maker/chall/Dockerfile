@@ -9,6 +9,7 @@ RUN useradd -r -s /bin/bash ctf-cracked
 COPY flag.txt /ctf
 COPY chall.sh /ctf
 COPY task /etc/cron.d/task
+RUN touch /var/log/cron.log
 COPY entrypoint.sh /entrypoint.sh
 
 #create tasks list file 
