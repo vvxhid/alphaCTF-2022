@@ -16,6 +16,7 @@ RUN chmod +x entrypoint.sh main.py && chown -R alpha:alpha .
 
 EXPOSE 9009
 
+USER alpha
 CMD ["./entrypoint.sh"]
 
 
