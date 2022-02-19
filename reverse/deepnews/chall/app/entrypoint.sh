@@ -9,7 +9,7 @@ echo "Waiting for Emulator to start"
 
 adb wait-for-device
 
-sleep 3
+sleep 10
 echo "restarting emulator as root"
 # run adb as root
 adb root
